@@ -1,0 +1,5 @@
+（1）git remote add origin http://github.com/userName    --关联时出现错误fatal:remote origin already exists,则执行下一条语句,在进行关联
+git remote rm origin
+（2）git push origin master  --如果推送时出现错误error:failed to push som refs to ......,则执行下面语句
+git pull origin master   --将远程仓库github上的文件拉下来合并之后再重新推送
+
