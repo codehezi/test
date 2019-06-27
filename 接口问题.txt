@@ -1,0 +1,2 @@
+Java接口属性，默认可以省略public static final，也就说java接口里可以定义变量，而且这个变量
+是可以被继承的，并且还是静态final常量。
