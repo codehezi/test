@@ -1,0 +1,34 @@
+package com.hezi.test;
+
+import java.io.UnsupportedEncodingException;
+
+public class demo3 {
+	public static void main(String[] args) {
+		String str1=null;
+		 try {
+			 str1=new String(substr("我好的很",2).getBytes("GBK"),"UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} 
+		System.out.println(str1);
+	}
+	
+  public static String substr(String str,int bt) {
+	   int by=0;
+	  for(int i=0;i<str.length();i++) {
+			  if(by==bt) {
+				  return str.substring(0,i);
+			  } 
+			  char c=str.charAt(i);
+			  if(c<256) {//这是判断的核心,一个字节的范围-128-127,这里的判断只能用范围来判断
+				  by+=1;
+			  }else {
+				 by+=2;
+				 if(by-bt==1) {
+					 return str.substring(0,i);
+				 }
+			}
+	  }
+	  return str;
+  }
+}

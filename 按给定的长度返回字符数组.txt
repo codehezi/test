@@ -1,0 +1,22 @@
+package com.hezi.test;
+
+public class demo {
+	public static void main(String[] args) {
+		 String[] s=test("a bcdefg",3);
+		 for(String str:s) {
+			 System.out.println(str);
+		 }
+	}
+  public static String[] test(String str,int len) {
+	  int s=(str.length()+len-1)/len;
+	  String[] str1=new String[s] ;
+	   for(int i=0;i<s;i++) { 
+		   if(i<s-1) {
+		   str1[i]=str.substring(i*len,(1+i)*len);
+	   }else {
+		   str1[i]=str.substring(i*len);
+	   }
+		   }
+	  return str1;
+  }
+}
