@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>thymeleaf</title>
+</head>
+<body>
+  <table border="1px" align="center" width="50%">
+        <tr>
+           <th>name</th>
+           <th>age</th>
+        </tr>
+        <tr th:each="maps: ${map}">
+            <td th:each="entry:${maps}" th:text="${entry.value.name}"></td>
+            <td th:each="entry:${maps}" th:text="${entry.value.age}"></td>
+        </tr>
+     </table>
+</body>
+</html>
