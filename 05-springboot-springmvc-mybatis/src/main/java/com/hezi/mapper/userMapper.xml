@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hezi.mapper.userMapper">
+ <insert id="add" parameterType="user">
+     insert into u values(default,#{uname},#{upass})   
+ </insert>
+ <delete id="del" parameterType="int">
+    delete from u where uid=#{0}
+ </delete>
+ <select id="selAll"  resultType="user">
+    select u.uid,u.uname,u.upass from u 
+ </select>
+ <update id="update" parameterType="user">
+    update  u set u.uname=#{uname},u.upass=#{upass} where uid=#{uid}
+ </update>
+ <select id="sel"  resultType="user" parameterType="int">
+    select u.uid,u.uname,u.upass from u where uid=#{0}
+ </select>
+</mapper>
