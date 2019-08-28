@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: springcloud-eureka-provider
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: chenzhaofa
+Implementation-Vendor-Id: com.hezi
+Build-Jdk: 1.8.0_161
+Implementation-URL: http://projects.spring.io/spring-boot/springcloud-
+ eureka-provider/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
